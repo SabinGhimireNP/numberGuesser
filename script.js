@@ -3,6 +3,8 @@ console.log(numberGenerated);
 const lowOrHI_div = document.querySelector(".lowOrHi");
 let guesses = 10;
 let outputMatched;
+let previousValue = document.querySelector(".guesses");
+let guess_holder = document.querySelector(".lastResult");
 const form = document.querySelector(".form");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -21,6 +23,13 @@ form.addEventListener("submit", function (event) {
         lowOrHI_div.innerHTML = `<span>🎉Great job on guessing the number!🎉</span>`;
         lowOrHI_div.append;
         break;
+      } else if (numberGussed !== numberGenerated);
+      guesses--;
+      previousValue.textContent = `${numberGussed}`;
+      guess_holder.textContent = `${guesses}`;
+      form.reset();
+      if (!(guesses > 0)) {
+        alert("GAME OVER!!!");
       }
     }
   } while (outputMatched === false);
