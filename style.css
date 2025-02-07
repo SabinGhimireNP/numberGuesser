@@ -102,3 +102,39 @@ p {
   font-size: 16px;
   text-align: center;
 }
+@media screen and (max-width: 480px) {
+  body {
+    width: 100%;
+    min-width: unset;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  #wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 580px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  button, #subt {
+    width: 90%;
+    max-width: 250px;
+  }
+
+  #guessField {
+    width: 90%;
+    max-width: 250px;
+  }
+
+  #guess {
+    font-size: 40px;
+    margin-top: 60px;
+  }
+
+  h1 {
+    font-size: 24px;
+    padding: 10px;
+  }
+}
