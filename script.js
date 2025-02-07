@@ -45,11 +45,11 @@ form.addEventListener("submit", function (event) {
         }
         if (diference_value_abs >= 15) 
           {
-          if (diference_value < 0) 
+          if (diference_value > 0) 
           {
             lowOrHI_div.innerHTML = `<span>Oops! Too low! 🤔 Try a bit higher! ⬆️</span>`;
           }
-        else if (diference_value > 0){
+        else if (diference_value < 0){
           lowOrHI_div.innerHTML = `<span>Oops! Too high! 😅 Try a bit lower! ⬇️</span>`;
         }
         }
