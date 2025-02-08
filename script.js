@@ -6,6 +6,7 @@ let outputMatched;
 let previousValue = document.querySelector(".guesses");
 let previousGuesses = [];
 let newGameButton = document.querySelector(".Guess");
+const submitButton = document.querySelector(".guessSubmit");
 let guess_holder = document.querySelector(".lastResult");
 const form = document.querySelector(".form");
 
@@ -28,6 +29,7 @@ form.addEventListener("submit", function (event) {
 
   if (numberGussed === numberGenerated) {
     lowOrHI_div.innerHTML = `<span>🎉 Great job! You guessed the number! 🎉</span>`;
+    submitButton.style.display = "none"; //hiding submit button
     document.getElementById("guessField").setAttribute("disabled", "");
     createNewGameButton(); // Show "New Game" button
   } else {
@@ -48,6 +50,7 @@ form.addEventListener("submit", function (event) {
     document.getElementById("guessField").setAttribute("disabled", "");
     lowOrHI_div.innerHTML = `<span>Game Over! The number was ${numberGenerated}.</span>`;
     alert("GAME OVER!!!");
+    submitButton.style.display = "none"; //hiding submit button
     createNewGameButton(); // Show "New Game" button
   }
 
@@ -71,6 +74,7 @@ function createNewGameButton() {
     lowOrHI_div.innerHTML = ""; // Clear feedback message
     document.getElementById("guessField").value = ""; // Clear input field
     document.getElementById("guessField").removeAttribute("disabled"); // Enable input field
+    submitButton.style.display = "inline-block"; // Show Submit button again
     newGameBtn.remove(); // Remove button after reset
   });
 }

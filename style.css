@@ -20,12 +20,11 @@ body {
 }
 .lastResult {
   color: white;
-  padding: 7px;
+  /* padding: 7px; */
 }
 
 .guesses {
   color: white;
-  padding: 7px;
   padding-top: 5px;
 }
 
