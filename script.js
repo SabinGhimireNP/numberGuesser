@@ -1,3 +1,4 @@
+//Variable Creation
 let numberGenerated = parseInt(Math.floor(Math.random() * 100 + 1));
 // console.log(numberGenerated);
 const lowOrHI_div = document.querySelector(".lowOrHi");
@@ -56,6 +57,8 @@ form.addEventListener("submit", function (event) {
 
   form.reset();
 });
+
+//New Game
 function createNewGameButton() {
   let newGameBtn = document.createElement("button"); // Create button
   newGameBtn.id = "newGameBtn"; // Assign ID
